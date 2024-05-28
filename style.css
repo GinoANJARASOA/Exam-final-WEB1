@@ -1,0 +1,47 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(image/accueil/157983783_759495578014822_6545127917929286829_n.jpg);
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(138, 136, 136, 0.5); /* Change the opacity to make it darker or lighter */
+    z-index: 1;
+}
+
+.title {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    margin-top: 20%;
+    color: white;
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px #000;
+}
+.navbar {
+    position: relative;
+    z-index: 2;
+}
+
+
+.button-container {
+    position: relative;
+    z-index: 2;
+    margin-top: 20px;
+    margin-left: 48%;
+    font-size: 2rem;
+}
