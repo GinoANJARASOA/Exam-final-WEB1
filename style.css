@@ -4,24 +4,40 @@
     box-sizing: border-box;
 }
 
-body {
-    background-image: url(image/accueil/157983783_759495578014822_6545127917929286829_n.jpg);
-    background-size:cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-  }
 
-  body::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(138, 136, 136, 0.5); /* Change the opacity to make it darker or lighter */
-    z-index: 1;
+.navbar {
+    position: relative;
+    z-index: 2;
 }
+
+.conteneur {
+    width: 100%;
+    height: 94vh;
+    overflow: hidden;
+    position: fixed;
+  }
+  
+  .conteneur-slide {
+    display: flex;
+    animation: slide 20s infinite alternate;
+  }
+  
+  .imageInfo {
+    width: 100%;
+    height: 94vh;
+    background-size: contain;
+    object-fit: cover;
+  }
+  
+  @keyframes slide {
+    0% {
+      transform:scale(100%);
+    }
+  
+    100% {
+      transform: scale(130%);
+    }
+  }
 
 .title {
     position: relative;
@@ -32,11 +48,6 @@ body {
     font-size: 3rem;
     text-shadow: 2px 2px 4px #000;
 }
-.navbar {
-    position: relative;
-    z-index: 2;
-}
-
 
 .button-container {
     position: relative;
@@ -44,4 +55,94 @@ body {
     margin-top: 20px;
     margin-left: 48%;
     font-size: 2rem;
+}
+
+
+
+.conteneur img {
+  display: block;
+  width: 100%;
+}
+
+.conteneur::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(8, 24, 24, 0.5); /* Ajustez l'opacité selon vos besoins */
+  pointer-events: none;
+  z-index: 1;
+}
+
+.logo {
+  flex-basis: 3vw;
+  width: 30px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 20%;
+  margin-right: 30px;
+}
+
+.block_image { 
+  width: 48vw;
+  height: 68vh;
+  margin-left: 15vw;
+  margin-top: 13vh;
+  background-color: white;
+}
+
+.row,
+.section1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: -2;
+}
+
+.lotus_img {
+  width: 30vw;
+  height: 40vh;
+  margin-left: 5vw;
+  margin-top: 11vh;
+}
+
+p {
+  margin-left: 40px;
+  margin-top: 20px;
+}
+.image1 {
+  width: 32vw;
+  height: 34vh;
+  object-fit: cover;
+  margin-top: -10vh;
+  border-radius: 10px;
+}
+.image2 {
+  width: 17vw;
+  height: 44vh;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.image3 {
+  width: 18vw;
+  height: 32vh;
+  object-fit: cover;
+  margin-top: -8.5vh;
+}
+
+.image4 {
+  width: 14vw;
+  height: 32vh;
+  margin-top: -8.5vh;
+  object-fit: cover;
+}
+
+.image5 {
+  width: 17vw;
+  height: 22vh;
+  margin-top: 1.5vh;
+  object-fit: cover;
 }
